@@ -28,7 +28,7 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 
 # SQLite database
-DB_FILE = 'health_tracker.db'
+DB_FILE = '/tmp/health_tracker.db'
 
 def init_db():
     with sqlite3.connect(DB_FILE) as conn:
