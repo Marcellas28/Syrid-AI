@@ -133,7 +133,7 @@ def query_ollama(prompt: str, max_tokens: int = 300) -> str:
        - Recommended Actions (prioritized)
        - When to Seek Help (specific criteria)
     4. DISCLAIMER: Always include:
-       "NOTE: This is not medical diagnosis. Consult your healthcare provider.""""
+       "NOTE: This is not medical diagnosis. Consult your healthcare provider."""
     
     try:
         response = requests.post(
