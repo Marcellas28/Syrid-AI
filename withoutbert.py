@@ -74,13 +74,13 @@ def validate_csv_columns(data: List[Dict], required_columns: List[str], file_nam
         raise KeyError(f"Missing columns {missing} in {file_name}")
 
 try:
-    symptoms_data = load_csv('data/symptoms_conditions.csv')
+    symptoms_data = load_csv('symptoms_conditions.csv')
     validate_csv_columns(symptoms_data, ['Symptom', 'Possible_Conditions'], 'symptoms_conditions.csv')
     
-    medications_data = load_csv('data/medications.csv')
+    medications_data = load_csv('medications.csv')
     validate_csv_columns(medications_data, ['Medicine', 'Possible_Conditions', 'Dosage_Adult'], 'medications.csv')
     
-    diet_data = load_csv('data/diet_recommendations.csv')
+    diet_data = load_csv('diet_recommendations.csv')
     validate_csv_columns(diet_data, ['Possible_Conditions', 'diet'], 'diet_recommendations.csv')
 except Exception as e:
     logging.error(f"Data loading error: {e}")
